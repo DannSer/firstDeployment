@@ -1,0 +1,23 @@
+<div ng-controller="customerController">
+	<h3>Customers</h3>
+	<form>
+		<input type="text" ng-model="newCustomer.name">
+		<input type="submit" value="Add" ng-click="saveCustomer()">
+	</form>
+	<table>
+		<tr>
+			<th>Customer Name</th>
+			<th>Create Date</th>
+			<th>Actions</th>
+		</tr>
+		<tr ng-repeat="customer in customers">
+			<td>{{customer.name}}</td>
+			<td>{{customer.date|date}}</td>
+			<td>
+				<form>
+					<input type="submit" value="Delete Customer" ng-click="deleteCustomer(customer)">
+				</form>
+			</td>
+		</tr>
+	</table>
+</div>

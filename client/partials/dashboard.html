@@ -1,0 +1,43 @@
+<div ng-controller="dashboardController">
+	<ul class="productDisplay">
+		<li ng-repeat="product in products | limitTo: limitProducts ">
+			<h4>{{product.Name}}</h4>
+			<img ng-src="{{product.Picture}}">
+			<p>{{product.Description}}<p>
+			<p class="productCount">({{product.Quantity}})<p>
+		</tr>
+	</ul>
+	<button class="more" ng-click="moreProducts()">Show More Products</button>
+	<table id="orderDisplay">
+		<tr>
+			<th>Customer Name</th>
+			<th>Product</th>
+			<th>Quantity</th>
+			<th>Date</th>
+		</tr>
+		<tr ng-repeat="order in orders | limitTo: limitOrders ">
+			<td>{{order.name}}</td>
+			<td>{{order.product}}</td>
+			<td>{{order.quantity}}</td>
+			<td>{{order.date|date}}</td>
+		</tr>
+	</table>
+	<button class="more" ng-click="moreOrders()">Show More Orders</button>
+	<table id="customerDisplay">
+		<tr>
+			<th>Customer Name</th>
+			<th>Create Date</th>
+			<th>Actions</th>
+		</tr>
+		<tr ng-repeat="customer in customers">
+			<td>{{customer.name}}</td>
+			<td>{{customer.date|date}}</td>
+			<td>
+				<form>
+					<input type="submit" value="Delete Customer" ng-click="deleteCustomer(customer)">
+				</form>
+			</td>
+		</tr>
+	</table>
+	<button class="more" ng-click="moreCustomers()">Show More Customers</button>
+</div>

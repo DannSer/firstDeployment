@@ -1,0 +1,44 @@
+ul {
+	display: inline-block;
+}
+
+li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0px 10px;
+}
+
+img {
+	height: 100px;
+	width: 100px;
+	border: 1px solid black;
+}
+
+h4 {
+	text-align: center;
+}
+
+.productCount {
+	text-align: center;
+}
+
+#productSubmit{
+	display: inline-block;
+	width: 150px;
+	vertical-align: top;
+}
+
+.productDisplay{
+	border: 1px solid black;
+	width: 700px;
+	margin: 0px 100px;
+}
+
+#orderDisplay, #customerDisplay {
+	margin: 50px 100px;
+}
+
+.more{
+	margin: 10px 50px;
+	display: block;
+}

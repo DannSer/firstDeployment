@@ -1,0 +1,18 @@
+<div ng-controller="productController">
+	<h3>Add a product</h3>
+	<form id="productSubmit">
+		Name: <input type="text" ng-model="product.name"><br>
+		Image Src: <input type="text" ng-model="product.picture"><br>
+		Description: <input type="text" ng-model="product.description"><br>
+		Initial Quantity: <input type="number" ng-model="product.quantity"><br>
+		<input type="submit" value="Add Product" ng-click='addProduct()'>
+	</form>
+		<ul class="productDisplay">
+			<li ng-repeat="product in products">
+				<h4>{{product.Name}}</h4>
+				<img ng-src="{{product.Picture}}">
+				<p>{{product.Description}}<p>
+				<p class="productCount">({{product.Quantity}})<p>
+			</tr>
+		</ul>
+</div>
